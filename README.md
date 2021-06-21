@@ -1,12 +1,12 @@
 
  
-1. Introduction
+# 1. Introduction
 
  Crime has become an important thing that we need to consider to better our living environment. Especially during the Covid-19 time, many crime scenes are happening, which is dangerous and unacceptable. Social security and personal security have always been the primary concern of our lives.
 The project aims to design a powerful interactive web application to detect and detect crime in Boston from 2015 to 2021. Based on historical crime statistics, we can understand what happened in the past year and where the safest place to live. The analysis is getting the information to someone who needs it, such as the police, residents, or investors who want to invest in many aspects of Boston areas such as real estate, retail, and other businesses.
  
  
- 2. Problem Definition
+ # 2. Problem Definition
      
  
  
@@ -17,13 +17,13 @@ The project aims to design a powerful interactive web application to detect and 
 - Which area has highest number of crime scene?
 - Identify trends and relationships between crime types, locations, and their occurrence.
  
- 3. Methodology and Analysis road map
+ # 3. Methodology and Analysis road map
  
  First, we perform the Exploratory Data Analysis and Data Visualization with Tableau and Python. These tools will help us overview the interesting trend or patterns that occur from the dataset. Then we create five different predictive models to predict crime in Boston areas based on different target features. We make sure to optimize them for the best results. We also apply clustering on some features such as Location, Offense_Code, etc., to see how the crime performs
  in the areas. In the end, we summarize our findings and answer the questions above.
 
 
-4. Dataset
+# 4. Dataset
 
  We are using dataset of the Boston crime incident reporting which is provided by Boston Police Department. This dataset contains the record of crime incidents starting from 2015 till 2021. Data is available on public platform and can be retrieved from their website: Crime Incident Report August 2015 to date. There are seven files, each represent a corresponding year. It is available in “.CSV” file format to view.
 Following are the column fields that this dataset contains:
@@ -74,7 +74,7 @@ Finally, we have the dataset as below for the EDA part:
 From the dataset above, we still see UCR_PART still have some missing values, but we will keep that for now because it contains 2019 – 2021 values, because if we remove them, the EDA results will not have the information from 2019 to 2021.
 
 
-5. Exploratory Data Analysis and Data Visualization
+# 5. Exploratory Data Analysis and Data Visualization
 
 First of all, We plotted a correlation plot among the features of dataset to check if there is any multicollinearity exist among the columns. YEAR and OCURRED_ON_DATE columns shows high correlation which is obvious and needs a further improvement.
 
@@ -112,13 +112,13 @@ Correlation Matrix
 With the help of a correlation matrix, we can visualize there is no multicollinearity in our dataset. Occurred on date and Year seems highly related, which as usual, we have taken care of this relationship. From this result, it will be helpful for further analysis in the next step.
 
 
-6. Data cleaning
+# 6. Data cleaning
 
 First, we need to check the missing values of the dataset. We can notice that variable Group contains more than 24% missing values of the dataset. Following is UCR_Part, Street and District.
   For further analysis, we remove columns with missing values that have more than 10%, then with UCR_Part, we fill Null values with “Other”, then drop the rows with no values.
 
 
-7. Prediction Analysis – Model building
+# 7. Prediction Analysis – Model building
 
 Different models were applied to choose the final models with the best performance to help predict crime in Boston. The models we used are K-nearest neighbors’ algorithm (KNN), Random Forest, Light Gradient Boosting Machine (LightGBM), Gaussian Naive Bayes (GaussianNB), and Artificial neural networks (ANNs). First, we defined a reusable function to evaluate model performance:
  
@@ -171,7 +171,7 @@ On the modeling side, we applied 5 models. Theoretically, these models are suita
 future applications in the data analysis of criminal statistics according to geographical and temporal characteristics and extends to other datasets in the fields of public order, business and law.
 
 
-References,
+# References,
 
 
 Crime Incident Eeports (August 2015 - to date) (source: new system), Analyze Boston, from
